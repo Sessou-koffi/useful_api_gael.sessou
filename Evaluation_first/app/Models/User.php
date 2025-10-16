@@ -38,4 +38,9 @@ class User extends Authenticatable
             ->withPivot('active')
             ->withTimestamps();
     }
+
+    public function shortLinks()
+    {
+        return $this->hasMany(ShortLink::class);
+    }
 }
